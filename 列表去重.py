@@ -6,3 +6,6 @@ def unique_nums(nums):
             s.add(nums[i])
             ans.append(nums[i])
     return ans        
+def unique_nums2(nums):
+    nums2= dict.fromkeys(nums,)
+    return list(nums2)
