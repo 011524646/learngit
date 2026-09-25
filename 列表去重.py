@@ -9,3 +9,5 @@ def unique_nums(nums):
 def unique_nums2(nums):
     nums2= dict.fromkeys(nums,)
     return list(nums2)
+nums1=[1,1,2,3,1,3,4,6,1,4,4,2,3,6,6]
+print(unique_nums(nums1)==unique_nums2(nums1))

@@ -1,15 +1,10 @@
 nums=[1,2,4,3,2,23,9,4,3]
-print(nums[1:6]) 
-print(nums[-2:])
-print(nums[::3])
 matrix=[[1,2,3],[2,4,8]]
-print(matrix)
 matrix.append([2,6,3])
-print(matrix)
 nums.remove(23)
 nums.pop()
-print(nums)
-print(9 in nums)
 nums2=nums.copy()
 nums2.sort()
+print(nums2)
+nums2.insert(2,3)
 print(nums2)
