@@ -12,7 +12,6 @@ df   = pd.read_csv(BASE / 'scores_raw.csv')
 temp = pd.read_csv(BASE / 'class.csv')
 df=pd.merge(df,temp,on='班级',how='inner')
 print("merge 后  :", df.shape)
-df = df.drop_duplicates(subset=['学号'])
 
 #清洗
 print(df.isna().sum())
