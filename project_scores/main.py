@@ -11,13 +11,15 @@ BASE = Path(__file__).parent
 df   = pd.read_csv(BASE / 'scores_raw.csv')
 temp = pd.read_csv(BASE / 'class.csv')
 df=pd.merge(df,temp,on='班级',how='inner')
-
+print("merge 后  :", df.shape)
+df = df.drop_duplicates(subset=['学号'])
 
 #清洗
-print(df.isna().shape)
 print(df.isna().sum())
 df=df.drop_duplicates(subset=['学号'])
+print("去重后    :", df.shape)          # 32 → 30
 df=df.dropna(subset=['数学','语文','英语'])
+print("删缺失后  :", df.shape)
 print(df)
 
 #统计
