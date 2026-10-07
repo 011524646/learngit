@@ -15,10 +15,10 @@ print("merge 后  :", df.shape)
 
 #清洗
 print(df.isna().sum())
-df=df.drop_duplicates(subset=['学号'])
-print("去重后    :", df.shape)         
+df=df.drop_duplicates(subset=['学号']) 
+print("去重后    :", df.shape)      # 32 → 30   
 df=df.dropna(subset=['数学','语文','英语'])
-print("删缺失后  :", df.shape)
+print("删缺失后  :", df.shape) 
 print(df)
 
 #统计
